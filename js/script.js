@@ -35,12 +35,11 @@ function getRandomColor(){
 // backgroundColor code. still working on it. each iteration of the loop should pick a random number between 0 and 15 and then grab it from colorArray[randomNumber]
 function getRandomHexValue(){
 
-  const randColor = getRandomColor();
   let color = '#';
   for (let i=0; i<6; i++) {
-      color += randColor;
+      color += getRandomColor();
 
-
+  return (color);
   }
 // should print a random color on page (not finished)
   const body = document.querySelector('body');
