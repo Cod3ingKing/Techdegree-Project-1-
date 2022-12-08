@@ -16,6 +16,7 @@ const quotes = [
 ];
 //background color array. Not fully finished asked for help on slack Unit 1,Feb 6 2022 8:14pm
 const colorArray = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
+const body = document.querySelector('body');
 //
 
 //getRandomQuote function to generate a random number and call a string from the array. C-III
@@ -39,12 +40,12 @@ function getRandomHexValue(){
   for (let i=0; i<6; i++) {
       color += getRandomColor();
 
-  return (color);
+
   }
 // should print a random color on page (not finished)
-  const body = document.querySelector('body');
+return (color);
 
-  body.styles.backgroundColor = getRandomHexValue();
+
 
 }
 //prints a random quote on page for each click
@@ -67,7 +68,7 @@ function printQuote(){
   }
   htmlString += `</p>`;
 
-
+body.style.backgroundColor = getRandomHexValue();
 //prints html string on page
 
 document.getElementById('quote-box').innerHTML = htmlString;
